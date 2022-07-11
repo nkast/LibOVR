@@ -33,6 +33,6 @@ namespace nkast.LibOVR
         Object2 = 0x0400,
         Object3 = 0x0800,
 
-        ovrControllerType_Active = 0xffffffff,
+        Active = 0xffffffff,
     }
 }
