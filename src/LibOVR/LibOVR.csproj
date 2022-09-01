@@ -64,18 +64,20 @@
     <Compile Include="OvrVector3f.cs" />
   </ItemGroup>
 
-
   <ItemGroup>
-    <None Include="..\LibOvr.Native\bin\Debug\x64\nkast.LibOVR.Native.dll" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'"
+    <Content Include="..\LibOvr.Native\bin\Debug\x64\nkast.LibOVR.Native.dll" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'"
                   Pack="true" PackagePath="runtimes\win-x64\native">
       <Link>nkast.LibOVR.Native.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="..\LibOVR.Native\bin\Release\x64\nkast.LibOVR.Native.dll" Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'"
+    </Content>
+    <Content Include="..\LibOVR.Native\bin\Release\x64\nkast.LibOVR.Native.dll" Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'"
                   Pack="true" PackagePath="runtimes\win-x64\native">
       <Link>nkast.LibOVR.Native.dll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
+    </Content>
+        
+    <Content Include="nkast.LibOVR.targets" 
+                  Pack="true" PackagePath="build"  />
   </ItemGroup>
 
 </Project>
