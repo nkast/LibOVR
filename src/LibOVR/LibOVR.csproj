@@ -17,10 +17,10 @@
   
   <PropertyGroup>
     <PackageId>nkast.LibOVR</PackageId>
-    <Version>1.0.0</Version>
+    <Version>2.0.0</Version>
     <Authors>nkast</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <Copyright>Copyright 2022 Kastellanos Nikolaos</Copyright>
+    <Copyright>Copyright 2024 Kastellanos Nikolaos</Copyright>
     <RepositoryUrl>https://github.com/nkast/LibOVR</RepositoryUrl>
     <PackageTags>Oculus</PackageTags>
   </PropertyGroup>
