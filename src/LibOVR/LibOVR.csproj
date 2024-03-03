@@ -6,6 +6,7 @@
     <RootNamespace>nkast.LibOVR</RootNamespace>
     <AssemblyName>nkast.LibOVR</AssemblyName>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <IsTrimmable Condition="$([MSBuild]::IsTargetFrameworkCompatible('$(TargetFramework)', 'net8.0'))">true</IsTrimmable>
   </PropertyGroup>
 
   <ItemGroup>
