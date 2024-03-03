@@ -51,7 +51,7 @@ namespace nkast.LibOVR
         public int CreateTextureSwapChainDX(IntPtr dxDevice, OvrTextureSwapChainDesc desc, out OvrTextureSwapChain textureSwapChain)
         {
             IntPtr textureSwapChainPtr;
-            var ovrResult = Native.ovr_CreateTextureSwapChainDX(_nativePtr, dxDevice, ref desc, out textureSwapChainPtr);
+            int ovrResult = Native.ovr_CreateTextureSwapChainDX(_nativePtr, dxDevice, ref desc, out textureSwapChainPtr);
             if (ovrResult >= 0)
             {
                 textureSwapChain = new OvrTextureSwapChain(this, textureSwapChainPtr);
@@ -62,13 +62,13 @@ namespace nkast.LibOVR
 
         public OvrEyeRenderDesc GetRenderDesc(OvrEyeType eye, OvrFovPort fov)
         {
-            var ovrResult = Native.ovr_GetRenderDesc(_nativePtr, eye, fov);
+            OvrEyeRenderDesc ovrResult = Native.ovr_GetRenderDesc(_nativePtr, eye, fov);
             return ovrResult;
         }
 
         public int GetSessionStatus(out OvrSessionStatus sessionStatus)
         {
-            var ovrResult = Native.ovr_GetSessionStatus(_nativePtr, out sessionStatus);
+            int ovrResult = Native.ovr_GetSessionStatus(_nativePtr, out sessionStatus);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -105,19 +105,19 @@ namespace nkast.LibOVR
 
         public int GetInputState(OvrControllerType controllerType, out OvrInputState inputState)
         {
-            var ovrResult = Native.ovr_GetInputState(_nativePtr, controllerType, out inputState);
+            int ovrResult = Native.ovr_GetInputState(_nativePtr, controllerType, out inputState);
             return ovrResult;
         }
 
         public int SetControllerVibration(OvrControllerType controllerType, float frequency, float amplitude)
         {
-            var ovrResult = Native.ovr_SetControllerVibration(_nativePtr, controllerType, frequency, amplitude);
+            int ovrResult = Native.ovr_SetControllerVibration(_nativePtr, controllerType, frequency, amplitude);
             return ovrResult;
         }
 
         public unsafe int WaitToBeginFrame(long frameIndex)
         {
-            var ovrResult = Native.ovr_WaitToBeginFrame(_nativePtr, frameIndex);
+            int ovrResult = Native.ovr_WaitToBeginFrame(_nativePtr, frameIndex);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -125,7 +125,7 @@ namespace nkast.LibOVR
 
         public unsafe int BeginFrame(long frameIndex)
         {
-            var ovrResult = Native.ovr_BeginFrame(_nativePtr, frameIndex);
+            int ovrResult = Native.ovr_BeginFrame(_nativePtr, frameIndex);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -133,7 +133,7 @@ namespace nkast.LibOVR
 
         public unsafe int EndFrame(long frameIndex, IntPtr viewScaleDesc, OvrLayerHeader** layerPtrList, uint layerCount)
         {
-            var ovrResult = Native.ovr_EndFrame(_nativePtr, frameIndex, viewScaleDesc, layerPtrList, layerCount);
+            int ovrResult = Native.ovr_EndFrame(_nativePtr, frameIndex, viewScaleDesc, layerPtrList, layerCount);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -142,7 +142,7 @@ namespace nkast.LibOVR
         [Obsolete("Use ovr_WaitToBeginFrame/ovr_BeginFrame/ovr_EndFrame")]
         public unsafe int SubmitFrame(long frameIndex, IntPtr viewScaleDesc, OvrLayerHeader** layerPtrList, uint layerCount)
         {
-            var ovrResult = Native.ovr_SubmitFrame(_nativePtr, frameIndex, viewScaleDesc, layerPtrList, layerCount);
+            int ovrResult = Native.ovr_SubmitFrame(_nativePtr, frameIndex, viewScaleDesc, layerPtrList, layerCount);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);

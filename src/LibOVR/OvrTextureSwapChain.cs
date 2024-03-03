@@ -35,7 +35,7 @@ namespace nkast.LibOVR
 
         public int GetTextureSwapChainLength(out int count)
         {
-            var ovrResult = Native.ovr_GetTextureSwapChainLength(_ovrSession.NativePtr, _nativePtr, out count);
+            int ovrResult = Native.ovr_GetTextureSwapChainLength(_ovrSession.NativePtr, _nativePtr, out count);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -43,7 +43,7 @@ namespace nkast.LibOVR
 
         public int GetTextureSwapChainBufferDX(int index, Guid iid, out IntPtr out_Buffer)
         {
-            var ovrResult = Native.ovr_GetTextureSwapChainBufferDX(_ovrSession.NativePtr, _nativePtr, index, iid, out out_Buffer);
+            int ovrResult = Native.ovr_GetTextureSwapChainBufferDX(_ovrSession.NativePtr, _nativePtr, index, iid, out out_Buffer);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -51,7 +51,7 @@ namespace nkast.LibOVR
 
         public int GetCurrentIndex(out int index)
         {
-            var ovrResult = Native.ovr_GetTextureSwapChainCurrentIndex(_ovrSession.NativePtr, _nativePtr, out index);
+            int ovrResult = Native.ovr_GetTextureSwapChainCurrentIndex(_ovrSession.NativePtr, _nativePtr, out index);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);
@@ -59,7 +59,7 @@ namespace nkast.LibOVR
 
         public int Commit()
         {
-            var ovrResult = Native.ovr_CommitTextureSwapChain(_ovrSession.NativePtr, _nativePtr);
+            int ovrResult = Native.ovr_CommitTextureSwapChain(_ovrSession.NativePtr, _nativePtr);
             if (ovrResult >= 0)
                 return ovrResult;
             throw new OvrException(ovrResult);

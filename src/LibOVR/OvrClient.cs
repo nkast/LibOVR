@@ -41,7 +41,7 @@ namespace nkast.LibOVR
             if (OvrClient._current.IsAlive)
                 throw new InvalidOperationException("Allready initialized");
 
-            var ovrResult = Native.ovr_Initialize(IntPtr.Zero);
+            int ovrResult = Native.ovr_Initialize(IntPtr.Zero);
             if (ovrResult >= 0)
             {
                 ovrClient = new OvrClient();
@@ -57,7 +57,7 @@ namespace nkast.LibOVR
             if (OvrClient._current.IsAlive)
                 throw new InvalidOperationException("Allready initialized");
 
-            var ovrResult = Native.ovr_Initialize(new IntPtr(&initParams));
+            int ovrResult = Native.ovr_Initialize(new IntPtr(&initParams));
             if (ovrResult >= 0)
             {
                 ovrClient = new OvrClient();
@@ -76,7 +76,7 @@ namespace nkast.LibOVR
 
             IntPtr sessionPtr;
             OvrGraphicsLuid luid;
-            var ovrResult = Native.ovr_Create(out sessionPtr, out luid);
+            int ovrResult = Native.ovr_Create(out sessionPtr, out luid);
             if (ovrResult >= 0)
             {
                 ovrSession = new OvrSession(this, sessionPtr, luid);

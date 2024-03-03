@@ -64,7 +64,7 @@ namespace nkast.LibOVR
 
         private string Utf8PtrToString(byte* pBytes, int byteCount)
         {
-            var bytes = new byte[byteCount];
+            byte[] bytes = new byte[byteCount];
             for(int i =0; i< byteCount; i++)
                 bytes[i] = pBytes[i];
 
