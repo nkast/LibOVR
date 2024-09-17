@@ -18,6 +18,9 @@ EXPORTS
    ovr_EndFrame
    ovr_SubmitFrame
    ovr_GetPredictedDisplayTime
+   ovr_SetTrackingOriginType
+   ovr_GetTrackingOriginType
+   ovr_RecenterTrackingOrigin
    ovr_GetTrackingState
    ovr_GetEyePoses2
    ovr_GetInputState

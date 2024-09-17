@@ -79,6 +79,28 @@ namespace nkast.LibOVR
             return Native.ovr_GetPredictedDisplayTime(_nativePtr, frameIndex);
         }
 
+        public int SetTrackingOriginType(OvrTrackingOrigin origin)
+        {
+            int ovrResult = Native.ovr_SetTrackingOriginType(_nativePtr, origin);
+            if (ovrResult >= 0)
+                return ovrResult;
+            throw new OvrException(ovrResult);
+        }
+
+        public OvrTrackingOrigin GetTrackingOriginType()
+        {
+            OvrTrackingOrigin ovrResult = Native.ovr_GetTrackingOriginType(_nativePtr);
+            return ovrResult;
+        }
+
+        public int RecenterTrackingOrigin(OvrTrackingOrigin origin)
+        {
+            int ovrResult = Native.ovr_RecenterTrackingOrigin(_nativePtr);
+            if (ovrResult >= 0)
+                return ovrResult;
+            throw new OvrException(ovrResult);
+        }
+
         public OvrTrackingState GetTrackingState(double absTime, OvrBool latencyMarker)
         {
             return Native.ovr_GetTrackingState(_nativePtr, absTime, latencyMarker);

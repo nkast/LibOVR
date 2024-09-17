@@ -66,6 +66,7 @@
     <Compile Include="OvrTextureType.cs" />
     <Compile Include="OvrTouch.cs" />
     <Compile Include="OvrTrackingCaps.cs" />
+    <Compile Include="OvrTrackingOrigin.cs" />
     <Compile Include="OvrTrackingState.cs" />
     <Compile Include="OvrVector2f.cs" />
     <Compile Include="OvrVector3f.cs" />

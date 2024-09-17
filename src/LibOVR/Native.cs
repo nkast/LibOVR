@@ -62,6 +62,15 @@ namespace nkast.LibOVR
         internal static extern double ovr_GetPredictedDisplayTime(IntPtr ovrSession, long frameIndex);
 
         [DllImport("nkast.LibOVR.Native.dll")]
+        internal static extern int ovr_SetTrackingOriginType(IntPtr ovrSession, OvrTrackingOrigin origin);
+
+        [DllImport("nkast.LibOVR.Native.dll")]
+        internal static extern OvrTrackingOrigin ovr_GetTrackingOriginType(IntPtr ovrSession);
+
+        [DllImport("nkast.LibOVR.Native.dll")]
+        internal static extern int ovr_RecenterTrackingOrigin(IntPtr ovrSession);
+
+        [DllImport("nkast.LibOVR.Native.dll")]
         internal static extern OvrTrackingState ovr_GetTrackingState(IntPtr ovrSession, double absTime, OvrBool latencyMarker);
 
         [DllImport("nkast.LibOVR.Native.dll")]
