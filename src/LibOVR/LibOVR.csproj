@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFrameworks>net40;netstandard2.0;net8.0</TargetFrameworks>
@@ -17,7 +17,7 @@
   
   <PropertyGroup>
     <PackageId>nkast.LibOVR</PackageId>
-    <Version>2.1.0</Version>
+    <Version>2.2.0</Version>
     <Authors>nkast</Authors>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <Copyright>Copyright 2024 Kastellanos Nikolaos</Copyright>
