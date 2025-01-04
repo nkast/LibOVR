@@ -74,6 +74,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\LibOvr.Native\bin\Debug\x64\nkast.LibOVR.Native.dll" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'"
                   Pack="true" PackagePath="runtimes\win-x64\native">
       <Link>nkast.LibOVR.Native.dll</Link>
