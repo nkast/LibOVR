@@ -23,6 +23,7 @@
     <Copyright>Copyright 2024 Kastellanos Nikolaos</Copyright>
     <RepositoryUrl>https://github.com/nkast/LibOVR</RepositoryUrl>
     <PackageTags>Oculus</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
   </PropertyGroup>
 
   <ItemGroup>
